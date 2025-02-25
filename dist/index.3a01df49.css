@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: inter;
@@ -219,6 +220,11 @@ form input:focus {
   align-items: center;
   gap: 20px;
   display: flex;
+}
+
+button a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .bookCard {

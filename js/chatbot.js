@@ -18,7 +18,6 @@ async function getApiKey() {
   try {
     let snapshot = await getDoc(doc(db, "apiKey", "googlegenai"));
     apiKey = snapshot.data().key;
-    console.log("API Key:", apiKey);
     genAI = new GoogleGenerativeAI(apiKey);
     model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
   } catch (error) {

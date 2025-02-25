@@ -1,445 +1,436 @@
 body {
-    font-family: inter;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* navigation  */
-  nav {
-    margin: 10px;
-    background-color: #1c212e;
-    padding: 10px 30px;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    border-radius: 50px;
-  }
-  nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      text-decoration: none;
-      
-  }
-  nav ul li a {
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      font-weight: 200;
-  }
-  
-  /* hero section */
-  .HeroSection {
-      height: 70vh;
-      margin: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to bottom, #1c212e, #223055);
-      border-radius: 20px;
-  }
-  .HeroSection__text{
-      text-align: center;
-      color: white;
-      width: 50%;
-  }
-  .HeroSection__text h1{
-      font-size: 50px;
-      font-weight: 700;
-      line-height: 50px;
-      
-  }
-  .HeroSection__text p{
-      font-size: 20px;
-      font-weight: 200;
-      line-height: 30px;
-     
-  }
-  .CTAHero{
-      width: 130px;
-      height: 50px;
-      border-radius: 50px;
-      
-      background: linear-gradient(to bottom left, #5673bd, #223055);
-      color: white;
-      box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
-      border: 2px solid rgba(248, 248, 248, 0.4);
-  }
-  .CTAHero:hover{
-      cursor: pointer;
-      background: linear-gradient(to bottom, #1c212e, #223055);
-      color: white;
-      box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.6);
-      border: 1px solid white;
-      transition: all 0.3s ease-in-out;
-      transform: translateY(-2px);
-  }
-  
-  /* form section */
-  
-  .formSection {
-      height: 80vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(to bottom, #1c212e, #223055);
-      
-  }
-  .formSection__content{
-      display: flex;
-      width: 70%;
-      height: 80%;
-      padding: 5px;
-      background-color: white;
-      box-shadow: 0px 10px 30px rgba(45, 82, 248, 0.2);
-      border-radius: 5px;
-      border: 3px rgba(14, 83, 129, 0.3) solid;
-  
-  }
-  .formImgContainer{
-      background-image: url('./assets/booooks.jpg');
-      background-size: cover;
-      width: 50%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  form{
-      width: 50%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background-color: white;
-  }
-  form input{
-      width: 50%;
-      border: none;
-      margin-bottom: 5px;
-      background-color: rgba(209, 224, 247, 0.4);
-      padding: 15px;
-      border-radius: 30px;
-  }
-  form button{
-      width: 54%;
-      padding: 15px;
-      border-radius: 50px;
-      background: linear-gradient(to bottom left, #5673bd, #223055);
-      color: white;
-      box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
-      border: 2px solid rgba(248, 248, 248, 0.4);
-      cursor: pointer;
-  }
-  form input:focus{
-      outline: none;
-      background-color: rgba(209, 224, 247, 0.2);
-      border: 2px solid rgba(248, 248, 248, 0.4);
-  
-  }
-  
-  /* book list section */
-  .bookList{
-      padding: 20px;
-      
-  }
-  .bookList h1{
-      text-align: center;
-      color: black;
-      font-size: 40px;
-      font-weight: 700;
-  }
-  .sortContainer{
-      width: 30%;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      background: linear-gradient(to bottom left, #cad9ff, #cdd4e7);
-      border-radius: 50px;
-      padding: 0px 10px 0px 20px;
-      box-shadow: 0px 4px 20px rgba(59, 82, 131, 0.3);
-      border: 2px solid rgba(248, 248, 248, 0.4);
-  }
-  .sortContainer h2{
-      font-size: 17px;
-      font-weight: 400;
-  }
-  .sortContainer button{
-      width: 80px;
-      height: 30px;
-      border: none;
-      border-radius: 30px;
-      
-  }
-  .sortContainer button:focus{
-      background: linear-gradient(to bottom left, #5673bd, #223055);
-      color: white;
-      box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
-      border: 2px solid rgba(248, 248, 248, 0.4);
-  
-  }
-  
-  /* book category */
-  .bookCategoryCard{
-      background-color: #f4f8ff;
-      display: flex;
-      flex-direction: column;
-      padding: 0px 0px 20px 20px;
-      margin: 10px;
-      border-radius: 30px;
-      
-  }
-  .bookCategoryCard .categoryHeader{
-      text-transform: capitalize;
-      background-color: transparent;
-      width: max-content;
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 15px;
-      font-weight: 200;
-      border: 1px solid black;
-  }
-  .categoryLine{
-      width: 100%;
-      height: 1px;
-      background-color: rgba(26, 26, 26,0.5);
-      border: none;
-  }
-  
-  .bookCategorySections{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      justify-content: start;
-  }
-  .bookCard{
-      padding: 10px;
-      border-radius: 20px; 
-      width: 180px;
-  }
-  .bookCard button{
-      height: 30px;
-      
-  }
-  .bookCardButtons{
-      display: flex;
-      gap: 10px;
-  }
-  .deleteBook{
-      
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-      background-color: transparent;
-      cursor: pointer;
-  }
-  .editBook{
-      background: linear-gradient(to bottom left, #5673bd, #223055);
-      width: 80%;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      border: none;
-  }
-  .editBook:hover{
-      cursor: pointer;
-      background: linear-gradient(to bottom, #323d57, #41558b);
-      color: white;
-      box-shadow: 0px 4px 20px rgba(55, 78, 129, 0.6);
-  }
-  .book-title{
-      text-align: left;
-      text-transform: capitalize;
-      width: 100%;
-      height: 120px;
-      background: linear-gradient(to bottom left, #cad9ff, #899bcc);;
-      padding: 5px;
-  }
+  font-family: inter;
+  padding: 0;
+  margin: 0;
+}
 
-  /* edit book form  */
+/* navigation  */
+nav {
+  margin: 10px;
+  background-color: #1c212e;
+  padding: 10px 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  border-radius: 50px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  text-decoration: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 200;
+}
 
-    #editBook{
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 0px;
-        z-index: 2;
-    }
-    #editBook h2{
-        color: white;
-        font-size: 30px;
-        font-weight: 700;
-        text-align: center;
-    }
-    #editBook::before{
-        content: "";
-        position: fixed;
-        top: 0px;
-        left: 0px;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background: linear-gradient(to bottom, rgba(28, 33, 46, 0.5), rgba(34, 48, 85, 1));
-        z-index: -1;
-        backdrop-filter: blur(10px);
-    }
-    #editBookForm{
-        height: 60%;
-        margin: auto;
-        overflow: hidden;
-        
-    }
-    .cancelEdit{
-        border: 2px solid rgb(128, 60, 60);
-        padding: 10px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        cursor: pointer;
-        background-color: rgba(247, 5, 5,0.1);
-    }
+/* hero section */
+.HeroSection {
+  height: 70vh;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #1c212e, #223055);
+  border-radius: 20px;
+}
+.HeroSection__text {
+  text-align: center;
+  color: white;
+  width: 50%;
+}
+.HeroSection__text h1 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 50px;
+}
+.HeroSection__text p {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 30px;
+}
+.CTAHero {
+  width: 130px;
+  height: 50px;
+  border-radius: 50px;
 
-    /* feedback Container */
-    #feedbackContainer{
-        position: fixed;
-        top: 0px;
-        left: 20px;
-        width: 25%;
-        height: 95vh;
-        background-color: transparent;
-        display: flex;
-        align-items: start;
-        pointer-events: none;
-        flex-direction: column;
-    }
-    .feedbackCard{
-        background-color: white;
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 10px;
-        border-radius: 30px;
-        box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
-    }
-  
-  /* chatbot */
-  #chatbot-container {
-    width: 300px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: linear-gradient(to bottom, rgba(28, 33, 46, 0.5), rgba(34, 48, 85, 1));
-    box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255,0.3);
-    backdrop-filter: blur(10px);
-  }
-  
-  #chat-history {
-    height: 220px;
-    overflow-y: auto;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-    padding: 5px;
-  }
-  
-  #chat-input {
-    width: calc(100% - 60px);
-    padding: 5px;
-    border: none;
-    background-color: rgba(209, 224, 247, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 5px 0px 0px 5px;
-    padding-left: 10px;
-    color: white;
-  }
-  #chat-input::placeholder {
-    color: #ccc;
-  }
-  #chat-input:focus {
-    outline: none;
-    background-color: rgba(209, 224, 247, 0.2);
-  }
-  .chatbot-header {
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 10px;
-  }
-  
-  #send-btn {
-    height: 34px;
-    padding: 5px 10px;
-    cursor: pointer;
-    border: none;
-    background: linear-gradient(to bottom, #1c212e, #020307);
-    color: rgb(255, 255, 255);
-    border-radius: 0px 5px 5px 0px;
-  }
-  
-  .user-history {
-    background-color: rgba(224, 247, 250, 1);
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px 0;
-    display: flex;
-    width: 70%;
-    margin-left: auto;
-    padding: 10px;
-  }
-  .ai-history {
-    background-color: rgba(255, 224, 178, 1);
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px 0;
-    display: flex;
-    width: 70%;
-    padding: 10px;
-  }
-  .chat-input-container {
-    display: flex;
-  }
+  background: linear-gradient(to bottom left, #5673bd, #223055);
+  color: white;
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
+  border: 2px solid rgba(248, 248, 248, 0.4);
+}
+.CTAHero:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #1c212e, #223055);
+  color: white;
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.6);
+  border: 1px solid white;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-2px);
+}
+
+/* form section */
+
+.formSection {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #1c212e, #223055);
+}
+.formSection__content {
+  display: flex;
+  width: 70%;
+  height: 80%;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 10px 30px rgba(45, 82, 248, 0.2);
+  border-radius: 5px;
+  border: 3px rgba(14, 83, 129, 0.3) solid;
+}
+.formImgContainer {
+  background-image: url("./assets/booooks.jpg");
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+form input {
+  width: 50%;
+  border: none;
+  margin-bottom: 5px;
+  background-color: rgba(209, 224, 247, 0.4);
+  padding: 15px;
+  border-radius: 30px;
+}
+form button {
+  width: 54%;
+  padding: 15px;
+  border-radius: 50px;
+  background: linear-gradient(to bottom left, #5673bd, #223055);
+  color: white;
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
+  border: 2px solid rgba(248, 248, 248, 0.4);
+  cursor: pointer;
+}
+form input:focus {
+  outline: none;
+  background-color: rgba(209, 224, 247, 0.2);
+  border: 2px solid rgba(248, 248, 248, 0.4);
+}
+
+/* book list section */
+.bookList {
+  padding: 20px;
+}
+.bookList h1 {
+  text-align: center;
+  color: black;
+  font-size: 40px;
+  font-weight: 700;
+}
+.sortContainer {
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(to bottom left, #cad9ff, #cdd4e7);
+  border-radius: 50px;
+  padding: 0px 10px 0px 20px;
+  box-shadow: 0px 4px 20px rgba(59, 82, 131, 0.3);
+  border: 2px solid rgba(248, 248, 248, 0.4);
+}
+.sortContainer h2 {
+  font-size: 17px;
+  font-weight: 400;
+}
+.sortContainer button {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+}
+.sortContainer button:focus {
+  background: linear-gradient(to bottom left, #5673bd, #223055);
+  color: white;
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
+  border: 2px solid rgba(248, 248, 248, 0.4);
+}
+
+/* book category */
+.bookCategoryCard {
+  background-color: #f4f8ff;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 0px 20px 20px;
+  margin: 10px;
+  border-radius: 30px;
+}
+.bookCategoryCard .categoryHeader {
+  text-transform: capitalize;
+  background-color: transparent;
+  width: max-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 200;
+  border: 1px solid black;
+}
+.categoryLine {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(26, 26, 26, 0.5);
+  border: none;
+}
+
+.bookCategorySections {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  justify-content: start;
+}
+.bookCard {
+  padding: 10px;
+  border-radius: 20px;
+  width: 180px;
+}
+.bookCard button {
+  height: 30px;
+}
+.bookCardButtons {
+  display: flex;
+  gap: 10px;
+}
+.deleteBook {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  background-color: transparent;
+  cursor: pointer;
+}
+.editBook {
+  background: linear-gradient(to bottom left, #5673bd, #223055);
+  width: 80%;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: none;
+}
+.editBook:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #323d57, #41558b);
+  color: white;
+  box-shadow: 0px 4px 20px rgba(55, 78, 129, 0.6);
+}
+.book-title {
+  text-align: left;
+  text-transform: capitalize;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom left, #cad9ff, #899bcc);
+  padding: 5px;
+}
+
+/* edit book form  */
+
+#editBook {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0px;
+  z-index: 2;
+}
+#editBook h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+#editBook::before {
+  content: "";
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 33, 46, 0.5),
+    rgba(34, 48, 85, 1)
+  );
+  z-index: -1;
+  backdrop-filter: blur(10px);
+}
+#editBookForm {
+  height: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+.cancelEdit {
+  border: 2px solid rgb(128, 60, 60);
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background-color: rgba(247, 5, 5, 0.1);
+}
+
+/* feedback Container */
+#feedbackContainer {
+  position: fixed;
+  top: 0px;
+  left: 20px;
+  width: 25%;
+  height: 95vh;
+  background-color: transparent;
+  display: flex;
+  align-items: start;
+  pointer-events: none;
+  flex-direction: column;
+}
+.feedbackCard {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
+}
+
+/* chatbot */
+#chatbot-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(28, 33, 46, 0.5),
+    rgba(34, 48, 85, 1)
+  );
+  box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+#chat-history {
+  height: 220px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+#chat-input {
+  width: calc(100% - 60px);
+  padding: 5px;
+  border: none;
+  background-color: rgba(209, 224, 247, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px 0px 0px 5px;
+  padding-left: 10px;
+  color: white;
+}
+#chat-input::placeholder {
+  color: #ccc;
+}
+#chat-input:focus {
+  outline: none;
+  background-color: rgba(209, 224, 247, 0.2);
+}
+.chatbot-header {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 10px;
+}
+
+#send-btn {
+  height: 34px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to bottom, #1c212e, #020307);
+  color: rgb(255, 255, 255);
+  border-radius: 0px 5px 5px 0px;
+}
+
+.user-history {
+  background-color: rgba(224, 247, 250, 1);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  width: 70%;
+  margin-left: auto;
+  padding: 10px;
+}
+.ai-history {
+  background-color: rgba(255, 224, 178, 1);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px 0;
+  display: flex;
+  width: 70%;
+  padding: 10px;
+}
+.chat-input-container {
+  display: flex;
+}
 
 /* mobile devices */
 
 @media (max-width: 768px) {
-    .HeroSection__text{
-        width: 80%;
-        font-size: 15px;
-        height: max-content;
-    }
-    .formImgContainer{
-        display: none;
-    }
-    .formSection__content{
-        width: 100%;
-    
-    }
-    form{
-        width: 100%;
-    }
-    .sortContainer{
-        width: 80%;
-    }
-    
+  .HeroSection__text {
+    width: 80%;
+    font-size: 15px;
+    height: max-content;
+  }
+  .formImgContainer {
+    display: none;
+  }
+  .formSection__content {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  .sortContainer {
+    width: 80%;
+  }
 }
-
-  

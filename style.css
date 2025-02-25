@@ -221,6 +221,7 @@ body {
   .bookCard{
       padding: 10px;
       border-radius: 20px; 
+      width: 180px;
   }
   .bookCard button{
       height: 30px;
@@ -231,7 +232,7 @@ body {
       gap: 10px;
   }
   .deleteBook{
-      width: 20%;
+      
       border-radius: 50%;
       display: flex;
       justify-content: center;

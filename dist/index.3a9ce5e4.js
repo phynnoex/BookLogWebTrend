@@ -610,7 +610,6 @@ async function getApiKey() {
     try {
         let snapshot = await (0, _firestore.getDoc)((0, _firestore.doc)((0, _firebaseConfigJs.db), "apiKey", "googlegenai"));
         apiKey = snapshot.data().key;
-        console.log("API Key:", apiKey);
         genAI = new (0, _generativeAi.GoogleGenerativeAI)(apiKey);
         model = genAI.getGenerativeModel({
             model: "gemini-1.5-flash"

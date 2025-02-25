@@ -2,6 +2,7 @@ body {
   font-family: inter;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /* navigation  */
@@ -207,6 +208,10 @@ form input:focus {
   align-items: center;
   gap: 20px;
   justify-content: start;
+}
+button a{
+    text-decoration: none;
+    color: white;
 }
 .bookCard {
   padding: 10px;

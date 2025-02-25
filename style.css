@@ -131,6 +131,7 @@ body {
       color: white;
       box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
       border: 2px solid rgba(248, 248, 248, 0.4);
+      cursor: pointer;
   }
   form input:focus{
       outline: none;
@@ -260,6 +261,25 @@ body {
       background: linear-gradient(to bottom left, #cad9ff, #899bcc);;
       padding: 5px;
   }
+
+  /* edit book form  */
+    #editBookForm{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+        
+        
+    }
+    .cancelEdit{
+        border: 2px solid rgb(128, 60, 60);
+        padding: 10px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background-color: rgba(247, 5, 5,0.1);
+    }
   
   
   #chatbot-container {

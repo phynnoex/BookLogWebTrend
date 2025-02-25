@@ -4,7 +4,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { books, addBook, displayBooks, currentSort, uniqueCategory } from "./script.js";
+import { addBook, displayBooks, currentSort, uniqueCategory } from "./script.js";
 
 const aiButton = document.getElementById("send-btn");
 const aiInput = document.getElementById("chat-input");

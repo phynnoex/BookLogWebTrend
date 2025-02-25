@@ -95,6 +95,7 @@ async function deleteBook(id) {
     if (index !== -1) {
         books.splice(index, 1);
         displayBooks(currentSort, uniqueCategory);
+        updateFeedback("Book deleted successfully!");
     }
 }
 
@@ -116,6 +117,7 @@ bookForm.addEventListener("submit", async (e) => {
     await addBook(title, author, genre, rating);
     e.target.reset(); // Clear the form fields
     displayBooks(currentSort, uniqueCategory);
+    updateFeedback("Book added successfully!");
 });
 
 // clear field
@@ -154,7 +156,9 @@ editBookForm.addEventListener("submit", async (e) => {
         books[index] = { id, title, author, genre, rating };
         editBookDiv.style.display = "none";
         displayBooks(currentSort, uniqueCategory);
+        updateFeedback("Book updated successfully!");
     }
+    
 });
 
 // Sorting books
@@ -177,4 +181,25 @@ titleSort.addEventListener("click", () => {
     displayBooks(currentSort, uniqueCategory);
 });
 
-export {books, addBook, currentSort, uniqueCategory, displayBooks}
+//handle feedback
+//update the feedback container with feedback cards after every action performed
+//set timeout for 5 seconds to remove the feedback card
+
+
+function updateFeedback(message) {
+    setTimeout(() => {
+        const feedbackCards = document.querySelectorAll(".feedbackCard");
+        feedbackCards.forEach(card => {
+            card.remove();
+        });
+    }, 5000);
+
+    const feedbackContainer = document.getElementById("feedbackContainer");
+    const feedbackCard = document.createElement("div");
+    feedbackCard.classList.add("feedbackCard");
+    feedbackCard.innerHTML = `<p>${message}</p>`;
+    feedbackContainer.appendChild(feedbackCard);
+}
+
+
+export {updateFeedback, books, addBook, currentSort, uniqueCategory, displayBooks}

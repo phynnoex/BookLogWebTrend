@@ -263,13 +263,41 @@ body {
   }
 
   /* edit book form  */
-    #editBookForm{
+
+    #editBook{
         position: fixed;
         top: 0px;
         left: 0px;
         width: 100%;
+        height: 100%;
         overflow: hidden;
-        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0px;
+        z-index: 2;
+    }
+    #editBook h2{
+        color: white;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+    }
+    #editBook::before{
+        content: "";
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(to bottom, rgba(28, 33, 46, 0.5), rgba(34, 48, 85, 1));
+        z-index: -1;
+        backdrop-filter: blur(10px);
+    }
+    #editBookForm{
+        height: 60%;
         
     }
     .cancelEdit{
@@ -279,6 +307,29 @@ body {
         margin-bottom: 20px;
         cursor: pointer;
         background-color: rgba(247, 5, 5,0.1);
+    }
+
+    /* feedback Container */
+    #feedbackContainer{
+        position: fixed;
+        top: 0px;
+        left: 20px;
+        width: 25%;
+        height: 95vh;
+        background-color: transparent;
+        display: flex;
+        align-items: end;
+    }
+    .feedbackCard{
+        background-color: white;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        border-radius: 30px;
+        box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
     }
   
   
@@ -290,7 +341,6 @@ body {
     bottom: 20px;
     right: 20px;
     background: linear-gradient(to bottom, rgba(28, 33, 46, 0.5), rgba(34, 48, 85, 1));
-    
     box-shadow: 0px 4px 20px rgba(10, 15, 26, 0.3);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255,0.3);

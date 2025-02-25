@@ -4,7 +4,7 @@ import {
   getDoc,
 } from "firebase/firestore";
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { addBook, displayBooks, currentSort, uniqueCategory } from "./script.js";
+import { addBook, displayBooks, currentSort, uniqueCategory, updateFeedback } from "./script.js";
 
 const aiButton = document.getElementById("send-btn");
 const aiInput = document.getElementById("chat-input");
@@ -39,15 +39,7 @@ function appendMessage(message, isUser = false) {
   
   // Rule checking for predefined requests like adding tasks
   function ruleChatBot(request) {
-    if (request.startsWith("add task")) {
-      let task = request.replace("add task", "").trim();
-      if (task) {
-        appendMessage("Task " + task + " added!", true);  // Adding user message
-      } else {
-        appendMessage("Please specify a task to add.", true);  // Adding user message
-      }
-      return true;
-    } else if (request.startsWith("add book")) {
+     if (request.startsWith("add book")) {
       // Remove the "add book" part from the request
       let bookDetails = request.replace("add book", "").trim();
   
@@ -66,6 +58,7 @@ function appendMessage(message, isUser = false) {
             .then(() => {
               console.log("Book added successfully");
               appendMessage(`Book added! Title: ${title}, Author: ${author}, Genre: ${genre}, Rating: ${rating}`);
+              updateFeedback("Book added successfully", "success"); // Update feedback
             })
             .catch((error) => {
               console.error("Error adding book:", error);

@@ -308,6 +308,8 @@ form input:focus {
 
 #editBookForm {
   height: 60%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .cancelEdit {

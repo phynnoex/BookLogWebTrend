@@ -114,8 +114,12 @@ bookForm.addEventListener("submit", async (e) => {
     const rating = document.getElementById("rating").value;
 
     await addBook(title, author, genre, rating);
+    e.target.reset(); // Clear the form fields
     displayBooks(currentSort, uniqueCategory);
 });
+
+// clear field
+
 
 // Edit book functionality
 const editBookDiv = document.getElementById("editBook");

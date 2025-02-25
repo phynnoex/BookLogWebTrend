@@ -103,7 +103,6 @@ async function addBook(title, author, genre, rating) {
     const docRef = await addDoc(collection(db, "bookLog"), { title, author, genre, rating });
     books.push({ id: docRef.id, title, author, genre, rating });
     displayBooks(currentSort, uniqueCategory);
-
 }
 
 // Handle form submission for adding books
@@ -115,6 +114,7 @@ bookForm.addEventListener("submit", async (e) => {
     const rating = document.getElementById("rating").value;
 
     await addBook(title, author, genre, rating);
+    displayBooks(currentSort, uniqueCategory);
 });
 
 // Edit book functionality

@@ -1,7 +1,7 @@
-# BookLogWebTrend
+# Bookie
 
 ## Description
-BookLogWebTrend is a web application designed to help users keep track of their reading habits. Users can log books they have read, rate them, and ask AI questions on them. The application provides a user-friendly interface to manage and organize book logs efficiently.
+Bookie is a web application designed to help users keep track of their reading habits. Users can log books they have read, rate them, and ask AI questions on them. The application provides a user-friendly interface to manage and organize book logs efficiently.
 
 ## Features
 - Add, edit, and delete book entries

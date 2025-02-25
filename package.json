@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build --dist-dir docs --public-url /CheckList/ index.html",
+    "build": "parcel build --dist-dir docs --public-url /BookLogWebTrend/ index.html",
     "dev:build": "parcel build --dist-dir dist --no-content-hash index.html",
     "dev:run": "npm run dev:build && npm run dev:start",
     "dev:start": "parcel serve --dist-dir dist index.html",

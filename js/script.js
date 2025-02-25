@@ -1,9 +1,9 @@
 // Main script file for the book management system
 
-import { getFirestore, getDocs, collection, doc, getDoc, deleteDoc, updateDoc, addDoc } from "firebase/firestore";
+import {  getDocs, collection, doc, deleteDoc, updateDoc, addDoc } from "firebase/firestore";
 
 
-import { app,firebaseConfig,db } from "./firebaseConfig.js";
+import { db } from "./firebaseConfig.js";
 
 // Initialize Firebase
 

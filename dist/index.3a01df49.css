@@ -216,6 +216,7 @@ form input:focus {
 }
 
 .bookCategorySections {
+  flex-wrap: wrap;
   justify-content: start;
   align-items: center;
   gap: 20px;

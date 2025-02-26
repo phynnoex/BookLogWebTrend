@@ -208,6 +208,7 @@ form input:focus {
   align-items: center;
   gap: 20px;
   justify-content: start;
+  flex-wrap: wrap;
 }
 button a{
     text-decoration: none;

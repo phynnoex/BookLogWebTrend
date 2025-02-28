@@ -103,6 +103,7 @@ async function deleteBook(id) {
 async function addBook(title, author, genre, rating) {
     const docRef = await addDoc(collection(db, "bookLog"), { title, author, genre, rating });
     books.push({ id: docRef.id, title, author, genre, rating });
+    uniqueCategory = [...new Set(books.map(book => book.author))];
     displayBooks(currentSort, uniqueCategory);
 }
 
@@ -116,7 +117,7 @@ bookForm.addEventListener("submit", async (e) => {
 
     await addBook(title, author, genre, rating);
     e.target.reset(); // Clear the form fields
-    displayBooks(currentSort, uniqueCategory);
+    
     updateFeedback("Book added successfully!");
 });
 

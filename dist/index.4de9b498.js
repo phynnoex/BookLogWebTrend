@@ -706,6 +706,9 @@ async function addBook(title, author, genre, rating) {
         genre,
         rating
     });
+    uniqueCategory = [
+        ...new Set(books.map((book)=>book.author))
+    ];
     displayBooks(currentSort, uniqueCategory);
 }
 // Handle form submission for adding books
@@ -717,7 +720,6 @@ bookForm.addEventListener("submit", async (e)=>{
     const rating = document.getElementById("rating").value;
     await addBook(title, author, genre, rating);
     e.target.reset(); // Clear the form fields
-    displayBooks(currentSort, uniqueCategory);
     updateFeedback("Book added successfully!");
 });
 // clear field

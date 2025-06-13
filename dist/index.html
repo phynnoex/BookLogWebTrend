@@ -19,7 +19,9 @@
         <div class="HeroSection__text">
           <h1>Organise the books you read and rate ⭐ them</h1>
           <p>
-            Easily organize the books you've read, categorize them by author or genre, and rate them. Keep track of your reading journey and discover new favorites effortlessly!
+            Easily organize the books you've read, categorize them by author or
+            genre, and rate them. Keep track of your reading journey and
+            discover new favorites effortlessly!
           </p>
           <button class="CTAHero"><a href="#bookForm">Get Started</a></button>
         </div>
@@ -67,11 +69,13 @@
       </div>
     </div>
     <div id="chatbot-container">
-      <div class="chatbot-header">Task Chatbot</div>
-      <div id="chat-history"></div>
-      <div class="chat-input-container">
-        <input type="text" id="chat-input" placeholder="ask me anything">
-        <button id="send-btn">Send</button>
+      <div class="miniBot">🤖</div>
+      <div class="mainBot">
+        <div id="chat-history"></div>
+        <div class="chat-input-container">
+          <input type="text" id="chat-input" placeholder="ask me anything">
+          <button id="send-btn">Send</button>
+        </div>
       </div>
     </div>
     <div id="feedbackContainer"></div>
@@ -80,7 +84,17 @@
     <script src="/index.3a9ce5e4.js" defer=""></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js"></script>
 
-    <script>// Initialize the smooth scroll
+    <script>miniBot = document.querySelector(".miniBot");
+mainBot = document.querySelector(".mainBot");
+// Toggle chatbot visibility
+miniBot.addEventListener("click", ()=>{
+    mainBot.classList.toggle("active");
+    miniBot.classList.toggle("active");
+    miniBot.innerHTML = mainBot.classList.contains("active") ? "\u274C" : "\uD83E\uDD16";
+    miniBot.style.fontSize = mainBot.classList.contains("active") ? "15px" : "35px";
+    console.log("Chatbot toggled");
+});
+// Initialize the smooth scroll
 var scroll = new SmoothScroll('a[href*="#"]', {
     speed: 800,
     offset: 0

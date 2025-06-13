@@ -358,12 +358,33 @@ button a {
   background: linear-gradient(#1c212e80, #223055);
   border: 2px solid #ffffff4d;
   border-radius: 10px;
-  width: 300px;
+  width: max-content;
   padding: 10px;
+  transition: all .3s ease-in-out;
   position: fixed;
   bottom: 20px;
   right: 20px;
   box-shadow: 0 4px 20px #0a0f1a4d;
+}
+
+.miniBot {
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+}
+
+.miniBot:hover {
+  cursor: pointer;
+}
+
+.mainBot {
+  width: 300px;
+  display: none;
+}
+
+.active {
+  flex-direction: column;
+  display: flex;
 }
 
 #chat-history {

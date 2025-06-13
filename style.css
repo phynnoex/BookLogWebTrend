@@ -337,7 +337,7 @@ button a{
 
 /* chatbot */
 #chatbot-container {
-  width: 300px;
+  width: max-content;
   border: 1px solid #ccc;
   padding: 10px;
   position: fixed;
@@ -352,6 +352,25 @@ button a{
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+.miniBot{
+  width: 50px;
+  height: 50px;
+  font-size: 35px;
+}
+.miniBot:hover{
+  cursor: pointer;
+  
+}
+.mainBot{
+  display: none;
+  width: 300px;
+}
+.active{
+  display: flex;
+  flex-direction: column;
+  
 }
 
 #chat-history {
